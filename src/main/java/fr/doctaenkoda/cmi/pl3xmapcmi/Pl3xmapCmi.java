@@ -24,8 +24,8 @@ public final class Pl3xmapCmi extends JavaPlugin {
         // Plugin startup logic
         Config.reload(this);
         instance = this;
-        if (!new File(getDataFolder(), "icons/warp.png").exists()) {
-            saveResource("icons/warp.png", false);
+        if (!new File(getDataFolder(), "warp.png").exists()) {
+            saveResource("warp.png", false);
         }
         PluginManager pluginManager = this.getServer().getPluginManager();
 

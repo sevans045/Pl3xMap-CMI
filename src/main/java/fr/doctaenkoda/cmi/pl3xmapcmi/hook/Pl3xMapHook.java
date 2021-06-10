@@ -26,7 +26,7 @@ public class Pl3xMapHook {
 
     public static void load(Plugin plugin) {
         try {
-            BufferedImage icon = ImageIO.read(new File(plugin.getDataFolder(), "icons/warp.png"));
+            BufferedImage icon = ImageIO.read(new File(plugin.getDataFolder(), "warp.png"));
             api().iconRegistry().register(warpIconKey, icon);
         } catch (IOException e) {
             Pl3xmapCmi.getLog().log(Level.WARNING, "Failed to register warp icon", e);
