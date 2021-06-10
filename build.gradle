@@ -30,7 +30,6 @@ dependencies {
     compileOnly('com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT')
     compileOnly('net.pl3x.map:pl3xmap-api:1.0.0-SNAPSHOT')
     compileOnly('org.projectlombok:lombok:1.18.20')
-    implementation('net.kyori:adventure-api:4.8.0')
     implementation files('libs/CMIAPI8.7.8.2.jar')
 }
 
@@ -38,8 +37,4 @@ processResources {
     from(sourceSets.main.resources.srcDirs) {
         filter ReplaceTokens, tokens: [version: version]
     }
-}
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
 }
