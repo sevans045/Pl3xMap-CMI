@@ -24,6 +24,7 @@ public class CMI_Vanish_Listener implements Listener {
         }
     }
 
+    // Player use vanish
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onVanishStatusChange(final CMIPlayerVanishEvent cmiPlayerVanishEvent) {
         if (Config.HIDE_VANISHED) {
@@ -32,6 +33,7 @@ public class CMI_Vanish_Listener implements Listener {
         }
     }
 
+    // Player remove vanish
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onVanishStatusChange(final CMIPlayerUnVanishEvent cmiPlayerUnVanishEvent) {
         if (Config.HIDE_VANISHED) {

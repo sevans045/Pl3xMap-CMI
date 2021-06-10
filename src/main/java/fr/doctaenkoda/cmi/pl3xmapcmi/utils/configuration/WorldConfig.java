@@ -6,6 +6,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * This code was create by BillyGalbreath
+ * https://github.com/pl3xgaming/Pl3xMap-Essentials/blob/master/src/main/java/net/pl3x/map/essentials/configuration/WorldConfig.java
+ */
+
 @SuppressWarnings("unused")
 public class WorldConfig {
     private static final Map<UUID, WorldConfig> configs = new HashMap<>();
