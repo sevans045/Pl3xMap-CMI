@@ -1,0 +1,7 @@
+name: Pl3xmap-Cmi
+version: @version@
+main: fr.doctaenkoda.cmi.pl3xmapcmi.Pl3xmapCmi
+api-version: 1.16
+softdepend: [ Pl3xMap, CMI ]
+authors: [ DoctaEnkoda ]
+description: CMI addon for Pl3xMao
