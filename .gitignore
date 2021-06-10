@@ -23,7 +23,7 @@ atlassian-ide-plugin.xml
 *.ctxt
 
 # Package Files #
-*.jar
+# *.jar Need for build
 *.war
 *.nar
 *.ear
