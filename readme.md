@@ -1,4 +1,4 @@
-# Plx3Map-CMi
+# Pl3xMap-CMi
 
 This plugin supports: <br />
 + Vanish Player
