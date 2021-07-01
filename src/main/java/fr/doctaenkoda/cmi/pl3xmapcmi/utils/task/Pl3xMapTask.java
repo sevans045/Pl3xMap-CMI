@@ -43,12 +43,7 @@ public class Pl3xMapTask extends BukkitRunnable {
 
         for (Map.Entry<String, CmiWarp> entry : warps.entrySet()) {
             CmiWarp cmiWarp = entry.getValue();
-            Location location;
-            try {
-                location = cmiWarp.getLoc().getBukkitLoc();
-            } catch (Exception e) {
-                location = cmiWarp.getLoc();
-            }
+            net.Zrips.CMILib.Container.CMILocation location = cmiWarp.getLoc();
             if (location.getWorld().getUID().equals(world.uuid())) {
                 this.handle(entry.getKey(), location);
             }
