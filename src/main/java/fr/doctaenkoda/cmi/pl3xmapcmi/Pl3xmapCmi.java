@@ -1,7 +1,5 @@
 package fr.doctaenkoda.cmi.pl3xmapcmi;
 
-package fr.doctaenkoda.cmi.pl3xmapcmi;
-
 import fr.doctaenkoda.cmi.pl3xmapcmi.hook.Pl3xMapHook;
 import fr.doctaenkoda.cmi.pl3xmapcmi.listener.CMI_Vanish_Listener;
 import fr.doctaenkoda.cmi.pl3xmapcmi.utils.configuration.Config;
