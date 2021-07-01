@@ -1,5 +1,7 @@
 package fr.doctaenkoda.cmi.pl3xmapcmi;
 
+package fr.doctaenkoda.cmi.pl3xmapcmi;
+
 import fr.doctaenkoda.cmi.pl3xmapcmi.hook.Pl3xMapHook;
 import fr.doctaenkoda.cmi.pl3xmapcmi.listener.CMI_Vanish_Listener;
 import fr.doctaenkoda.cmi.pl3xmapcmi.utils.configuration.Config;
@@ -7,7 +9,11 @@ import lombok.Getter;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.logging.Logger;
 
