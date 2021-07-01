@@ -30,7 +30,9 @@ dependencies {
     compileOnly('com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT')
     compileOnly('net.pl3x.map:pl3xmap-api:1.0.0-SNAPSHOT')
     compileOnly('org.projectlombok:lombok:1.18.20')
-    implementation files('libs/CMIAPI8.7.8.2.jar')
+    //implementation files('libs/CMIAPI8.7.8.2.jar')
+    implementation files('libs/CMI9.0.0.4.jar')
+    implementation files('libs/CMILib1.0.2.5.jar')
 }
 
 processResources {

@@ -1,5 +1,6 @@
 package fr.doctaenkoda.cmi.pl3xmapcmi.utils.task;
 
+import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Modules.Warps.CmiWarp;
 import fr.doctaenkoda.cmi.pl3xmapcmi.hook.CMIHook;
 import fr.doctaenkoda.cmi.pl3xmapcmi.hook.Pl3xMapHook;
@@ -15,6 +16,7 @@ import org.bukkit.Location;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Pl3xMapTask extends BukkitRunnable {
     private final MapWorld world;
@@ -39,12 +41,18 @@ public class Pl3xMapTask extends BukkitRunnable {
 
         HashMap<String, CmiWarp> warps = CMIHook.getWarps();
 
-        warps.forEach((s, cmiWarp) -> {
-            Location loc = cmiWarp.getLoc().getBukkitLoc();
-            if (loc.getWorld().getUID().equals(world.uuid())) {
-                this.handle(s, loc);
+        for (Map.Entry<String, CmiWarp> entry : warps.entrySet()) {
+            CmiWarp cmiWarp = entry.getValue();
+            Location location;
+            try {
+                location = cmiWarp.getLoc().getBukkitLoc();
+            } catch (Exception e) {
+                location = cmiWarp.getLoc();
             }
-        });
+            if (location.getWorld().getUID().equals(world.uuid())) {
+                this.handle(entry.getKey(), location);
+            }
+        }
     }
 
     private void handle(String warpName, Location loc) {
