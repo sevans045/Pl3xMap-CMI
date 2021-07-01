@@ -28,6 +28,7 @@ public final class Pl3xmapCmi extends JavaPlugin {
         // Plugin startup logic
         Config.reload(this);
         instance = this;
+        BufferedImage image = null;
         try {
             if (!new File(getDataFolder(), "warp.png").exists()) {
                 URL url = new URL("https://raw.githubusercontent.com/DoctaEnkoda/Pl3xMap-CMI/master/src/main/resources/warp.png");
