@@ -7,7 +7,15 @@ import lombok.Getter;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.logging.Logger;
 
@@ -24,9 +32,17 @@ public final class Pl3xmapCmi extends JavaPlugin {
         // Plugin startup logic
         Config.reload(this);
         instance = this;
-        if (!new File(getDataFolder(), "warp.png").exists()) {
-            saveResource("warp.png", false);
+        BufferedImage image = null;
+        try {
+            if (!new File(getDataFolder(), "warp.png").exists()) {
+                URL url = new URL("https://raw.githubusercontent.com/DoctaEnkoda/Pl3xMap-CMI/master/src/main/resources/warp.png");
+                image = ImageIO.read(url);
+                ImageIO.write(image, "png",new File(getDataFolder(), "warp.png"));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
         PluginManager pluginManager = this.getServer().getPluginManager();
 
         for (String s : Arrays.asList("Pl3xMap", "CMI")) {
