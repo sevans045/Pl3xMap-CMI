@@ -39,13 +39,11 @@ public final class Pl3xmapCmi extends JavaPlugin {
             e.printStackTrace();
         }
         PluginManager pluginManager = this.getServer().getPluginManager();
-
-        for (String s : Arrays.asList("Pl3xMap", "CMI")) {
-            if (!getServer().getPluginManager().isPluginEnabled(s)) {
-                getLogger().severe(String.format("Plugin %s not found or disabled ! Plugin will be disabled!", s));
-                pluginManager.disablePlugin(this);
-                return;
-            }
+        String PluginsList = Arrays.toString(pluginManager.getPlugins());
+        if (!(PluginsList.contains("CMI") && PluginsList.contains("Pl3xMap"))) {
+            getLogger().severe("Plugin CMI or Pl3xMap not found or disabled ! Plugin will be disabled!");
+            pluginManager.disablePlugin(this);
+            return;
         }
 
         pluginManager.registerEvents(new CMI_Vanish_Listener(),this);
