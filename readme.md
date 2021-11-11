@@ -1,6 +1,6 @@
 # Pl3xMap-CMi
 
-This plugin supports: <br />
+This plugin supports:
 + /cmi vanish
 + /cmi warp
 
